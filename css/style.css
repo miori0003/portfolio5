@@ -1,0 +1,747 @@
+/* ベース設定 */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0;
+  color: #444;
+  background-color: #F8F6F1;
+  line-height: 1.7;
+}
+
+a{
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ヘッダー */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E5E2DC;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: 600;
+  font-size: 1.3rem;
+  color: #557C55; 
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #557C55;
+}
+
+/* ヘッダー */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 5%;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+        }
+          
+      }
+
+/* ヒーローセクション */
+.hero {
+  text-align: center;
+  padding: 120px 20px 80px;
+  background-color: #F4F1EC;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 12px;
+    opacity: 0;
+  transform: translateY(15px);
+  animation: fadeUp 1.5s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero p {
+  color: #666;
+   opacity: 0;
+  transform: translateY(15px);
+  animation: fadeUp 1.5s ease-out forwards;
+  animation-delay: 0.6s;
+}
+/* ヒーローセクション */
+  @media (max-width: 768px) {
+  .hero,
+  .hero-sub {
+    padding: 80px 20px 60px;
+  }
+
+  .hero h1,
+  .hero-sub h1 {
+    font-size: 1.6rem;
+    line-height: 1.4;
+    
+  }
+
+  .hero p,
+  .hero-sub p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Aboutページ */
+/* .about-hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background-color: #F4F1EC;
+}
+
+.about-hero h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.about-hero p {
+  color: #666;
+  font-size: 1rem;
+} */
+
+.profile {
+  padding: 80px 5%;
+  background-color: #FFFFFF;
+}
+
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.profile-photo {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+   filter: brightness(1.2);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.profile-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.profile-text h2 {
+  color: #557C55;
+  font-size: 1.6rem;
+  margin-bottom: 0px;
+  
+}
+
+.profile-text h3 {
+  color: #666;
+  font-size: 0.8rem;
+  margin-top: 0px;
+  margin-bottom: 16px;
+}
+
+
+
+
+.profile-text p {
+  color: #555;
+  margin-bottom: 24px;
+  line-height: 1.8;
+}
+
+.profile-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-info li {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+/* .values {
+  background-color: #F8F6F1;
+  text-align: center;
+  padding: 80px 10%;
+}
+
+.values h2 {
+  color: #557C55;
+  font-size: 1.8rem;
+  margin-bottom: 24px;
+}
+
+.values p {
+  color: #555;
+  line-height: 1.9;
+  max-width: 800px;
+  margin: 0 auto;
+} */
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+
+/* 作品セクション */
+.work{
+  text-align: center;
+  padding: 80px 5%;
+}
+
+.work h2 {
+  color: #557C55;
+  font-size: 1.8rem;
+  margin-bottom: 0px;
+}
+
+.work h3 {
+  color: #666;
+  font-size: 1.0rem;
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+.work h4 {
+  color: #666;
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.work-item {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.work-item:hover {
+  transform: translateY(-5px);
+}
+
+.work-item img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.work-item h3 {
+  color: #333;
+  margin: 16px 0 8px;
+}
+
+.work-item p {
+  color: #666;
+  font-size: 0.9rem;
+  padding: 0 10px;
+}
+
+.work-item img {
+  width: 100%;
+  height: auto;
+    display: block}
+
+    .work-item {
+  padding: 10px;
+  box-sizing: border-box;}
+
+ 
+  .retouch-img {
+  max-width: 80%;
+  margin: 0 auto;
+  display: block;
+  
+}
+
+/* Workセクション */
+@media (max-width: 768px) {
+
+  .work {
+    padding: 60px 8%;
+  }
+
+  .work h2 {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+  }
+
+  .work h3 {
+    margin-bottom: 0px;
+  }
+
+  .work-list {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .work-item {
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  }
+.work-item p{
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+  .work-text {
+    padding: 16px;
+  }
+
+  .work-text h3 {
+    font-size: 1rem;
+  }
+
+  .work-text p {
+    font-size: 0.9rem;
+   
+    }
+  
+
+ .retouch-img {
+  max-width: 70%;
+  margin: 0 auto;
+  display: block;}
+
+
+
+ }
+
+
+
+/* --- サブページ共通 --- */
+.hero-sub {
+  background-color: #F4F1EC;
+  padding: 100px 20px 60px;
+}
+
+.hero-sub h1 {
+  font-size: 1.8rem;
+  color: #557C55;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.hero-sub p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Worksページ */
+/* .work-item {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.work-text {
+  padding: 20px;
+  text-align: left;
+}
+
+
+.work-text h2 {
+ font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 8px;
+  border: solid 1px;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 2px 15px;
+
+}
+.work-text h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 0px;
+
+  padding-left: 10px;
+
+}
+.work-text p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  padding-bottom: 30px;
+}
+
+.work-sub{
+  text-align: center;
+}
+.work-sub h4{
+    font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0px;
+  
+}
+
+.work-sub p{
+    font-size: 0.95rem;
+  color: #333;
+  margin: 0px;
+  
+} */
+
+
+
+
+
+
+/* Works詳細ページ */
+.works{
+  text-align: center;
+  padding: 80px 5%;
+}
+
+
+
+.works h2 {
+  color: #557C55;
+  font-size: 1.8rem;
+  margin-bottom: 0px;
+}
+
+.works h3 {
+  color: #666;
+  font-size: 1.0rem;
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+.works h4 {
+  color: #666;
+  font-size: 1.5rem;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.works-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.works-item {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .works-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+} */
+
+.works-text {
+  padding: 20px;
+  text-align: left;
+}
+
+
+.works-text h2 {
+ font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 8px;
+  border: solid 1px;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 2px 15px;
+
+}
+.works-text h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0px;
+
+
+
+}
+.works-text p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 0px;
+  margin-top: 5px;
+  
+  padding-bottom: 30px;
+}
+
+.works-sub{
+  text-align: center;
+  padding: 30px;
+}
+.works-sub h4{
+    font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 0px;
+  
+}
+
+.works-sub p{
+    font-size: 0.95rem;
+  color: #333;
+  margin: 0px;
+  
+}
+
+.works-item img {
+  width: 100%;
+  height: auto;
+    display: block;
+    
+  }
+
+  .works-item {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+ .banner-img {
+  max-width: 80%;
+  margin: 0 auto;
+  display: block;}
+
+    .works-retouchimg {
+  max-width: 70%;
+  margin: 0 auto;
+  display: block;
+  
+}
+
+.works-sub{
+  text-align: left;
+}
+
+/* Works詳細セクション */
+@media (max-width: 768px) {
+
+  .works {
+    padding: 60px 5%;
+  }
+
+  .works h2 {
+    font-size: 0.8rem;
+    
+  }
+
+    .works h3 {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+
+  .works-list {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .works-item {
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+  }
+
+  .works-text {
+    padding: 16px;
+  }
+
+  .works-text h3 {
+    font-size: 1rem;
+  }
+
+  .works-text p {
+    font-size: 0.9rem;
+    }
+  }
+
+
+
+/* Contactページ */
+.contact-hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background-color: #F4F1EC;
+}
+
+.contact-hero h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.contact-hero p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.contact-form-section {
+  padding: 80px 5%;
+  background-color: #FFFFFF;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #F8F6F1;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+label span {
+  color: #E05C5C;
+  font-weight: normal;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #DDD;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #444;
+  background-color: #FFF;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #557C55;
+  box-shadow: 0 0 0 3px rgb
+
+}
+
+/* Contactページ */
+.contact-simple .contact-hero {
+  text-align: center;
+  padding: 100px 20px 60px;
+  background-color: #F4F1EC;
+}
+
+.contact-simple .contact-hero h1 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.contact-simple .contact-hero p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.contact-info {
+  text-align: center;
+  padding: 80px
+}
+
+
+
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #F4F1EC;
+  color: #777;
+  font-size: 0.9rem;
+}
+/* フッター */
+ @media (max-width: 768px) {
+  
+  footer {
+    padding: 30px 0;
+    font-size: 0.85rem;
+  }
+  }
+
+
+  
+  
+   
+
+
+
+
+
+
