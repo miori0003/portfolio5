@@ -15,6 +15,10 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+  
+}
 /* ヘッダー */
 header {
   display: flex;
@@ -713,6 +717,26 @@ textarea:focus {
 .contact-info {
   text-align: center;
   padding: 80px
+}
+
+
+button {
+  padding: 12px 28px;
+  font-size: 16px;
+  border-radius: 30px;
+  border: none;
+  background: #f7a8c3;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  margin: 40px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #f48fb1;
+  transform: translateY(-2px);
 }
 
 
