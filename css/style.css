@@ -722,7 +722,8 @@ textarea:focus {
 
 button {
   display: block;
-  margin: 40px auto;      
+  margin: auto;
+  
   padding: 12px 30px;
   font-size: 15px;
   color: #7a6a5f;          
