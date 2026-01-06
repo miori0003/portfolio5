@@ -722,7 +722,8 @@ textarea:focus {
 
 button {
   display: block;
-  margin: auto;
+  margin: 40px,auto;
+      text-align: center;
   
   padding: 12px 30px;
   font-size: 15px;
